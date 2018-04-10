@@ -4,20 +4,29 @@
 
 .header {
     height: 150px;
-    background-color: white;
+    background-color: yellow;
     width: auto;
     margin-bottom: 20px;
 
 }
 
 .logo {
-    height: 100px;
-    padding-top: 20px;
+    height: 60px;
     width: 250px;
     margin: 40px;
-    background-color: white;
+    background-color: red;
     float: left;
     font-size: 60px;
+}
+
+.Nav {
+    height: 60px;
+    width: 500px;
+    margin: 40px;
+    background-color: red;
+    float: right;
+    font-size: 20px;
+    padding: 5px;
 }
 
 .banner_1 {
