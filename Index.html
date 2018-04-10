@@ -5,6 +5,33 @@
     <head>
         <title>Portfolio</title>
         <link rel="stylesheet" href="style.css">
+                <script>
+                    
+                    
+                    
+                function countRabbits() {
+                    for(let i=1; i<=3; i++) {
+                      alert("Rabbit number " + i);
+                    }
+                }
+                
+                
+                    
+                function Testaction(id){
+                    
+                    var element = document.getElementById(id);
+                    //element.style.display = "none";
+                     if (element.style.display == "none") {
+                            element.style.display = "block";
+                        } else {
+                            element.style.display = "none";
+                        }
+                    
+                }
+                    
+                    
+                    
+            </script>
         
     </head>
     
@@ -16,11 +43,31 @@
         </div>
         
         <div class="banner_1">
-            <img src="thumbail_1.png"/>
-            <img src="thumbnail_2.png"/>
-            <img src="thumbnail_3.png"/>
             
-        </div>
+            <img src="thumbail_1.png" onclick="Testaction('test_1')"/>
+            <img src="thumbnail_2.png" onclick="Testaction('test_2')"/>
+            <img src="thumbnail_3.png" onclick="Testaction('test_3')"/>
+            
+            </div>
+        
+                <div id="test_1" class="banner_1" style="display: none";>
+                    <img src="thumbail_1.png"/>
+                    <img src="thumbail_1.png"/>
+                    <img src="thumbail_1.png"/>
+                </div>
+                
+                <div id="test_2" class="banner_1" style="display: none";>
+                    <img src="thumbnail_2.png"/>
+                    <img src="thumbnail_2.png"/>
+                    <img src="thumbnail_2.png"/>
+                </div>
+        
+                <div id="test_3" class="banner_1" style="display: none";>                
+                    <img src="thumbnail_3.png"/>
+                    <img src="thumbnail_3.png"/>
+                    <img src="thumbnail_3.png"/>
+                </div>
+   
     </body>
 
 
