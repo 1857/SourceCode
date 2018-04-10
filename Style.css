@@ -6,7 +6,7 @@
     height: 200px;
     background-color: aqua;
     width: auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
 }
 
@@ -22,7 +22,18 @@
 }
 
 .banner_1 {
-    height: 400px;
-    background-color: cadetblue;
-    width: auto;
+    height: 450px;
+    border: 1px solid lime;
+    width: 96%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
+
+::-webkit-scrollbar {
+    width: 0px; 
+    height: 20px;
+    background: transparent;
