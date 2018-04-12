@@ -3,34 +3,36 @@
 
 
 .header {
-    height: 150px;
-    background-color: white;
+    height: 100px;
     width: auto;
     margin-bottom: 20px;
 
 }
 
+body {
+    background-color: #f1f1f1;
+}
+
+
 .logo {
     height: 60px;
     width: 250px;
     margin: 40px;
-    background-color: white;
     float: left;
     font-size: 60px;
 }
 
 .Nav {
-    height: 100px;
+    height: 90px;
     width: 600px;
     margin: 40px;
-    background-color: white;
     float: right;
     font-size: 30px;
     padding: 5px;
 }
 
 .banner_1 {
-    height: 450px;
+    height: 260px;
     width: 96%;
     margin-top: 1x;
     margin-left: auto;
@@ -41,12 +43,11 @@
     order: solid 1px lime;
 }
 
-::-webkit-scrollbar {
-    width: 0px; 
-    height: 20px;
-    background: transparent;
+.banner_2 {
+    height: 260px;
+    width: 
 }
-    
+
     
 .links {
     margin-top: 40px;
