@@ -59,6 +59,15 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.text_box_2 {
+    height: 250px;
+    width: 430px;
+    margin-left: 36px;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+
 .img_ban_2 { 
     margin-top: 36px;
     height: 450px;
