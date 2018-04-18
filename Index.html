@@ -22,8 +22,15 @@
                 {
                     portfoliocontent.style.display = "none";
                     othething.style.display = "block";
-                }
+                } 
             } 
+            
+            function controledmouceoutevent(img, src, id){
+                var portfoliocontent = document.getElementById(id);
+                if (portfoliocontent.style.display == "none"){
+                    this.src = src;
+                }
+            }
     
             
            
@@ -38,7 +45,7 @@
           
         
         <div class="banner_1">
-            <img class="img_ban" src="tn_1_un.png" onmouseover="this.src='tn_1_se.png';" onmouseout="this.src='tn_1_un.png'" onclick="DisPorfolioContent('test_1')"/>
+            <img class="img_ban" src="tn_1_un.png" onmouseover="this.src='tn_1_se.png';" onmouseout="controledmouceoutevent(this, 'tn_1_un.png', 'test_1')" onclick="DisPorfolioContent('test_1')"/>
             <img class="img_ban" src="tn_2_un.png" onmouseover="this.src='tn_2_se.png';" onmouseout="this.src='tn_2_un.png'" onclick="DisPorfolioContent('test_2')"/>
             <img class="img_ban" src="tn_3_un.png" onmouseover="this.src='tn_3_se.png';" onmouseout="this.src='tn_3_un.png'" onclick="DisPorfolioContent('test_3')"/>
             <img class="img_ban_1" src="tn_4_un.png" onmouseover="this.src='tn_4_se.png';" onmouseout="this.src='tn_4_un.png'" onclick="DisPorfolioContent('test_4')"/>
@@ -47,61 +54,86 @@
         
             <div class="banner_2" id='text'>
                 <div class="text_box">
-                    <h1 style="font-family: 'Abril Fatface', cursive;">Photography</h1>
-                    <h2>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </h2>
+                    <h5 class="heading">Photography</h5>
+                    <p>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </p>
                 </div>
                 <div class="text_box">
-                    <h1 style="font-family: 'Abril Fatface', cursive;">Screen</h1>
-                    <h2>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </h2>
-                </div>
+                    <p> Screen 
+                        Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </p>
+                </div> 
                 <div class="text_box">
-                    <h1 style="font-family: 'Abril Fatface', cursive;">Web Design</h1>
-                    <h2>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </h2>
+                    <h5 class="heading">Web Design</h5>
+                    <p>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </p>
                 </div>
-                <div class="text_box">
-                    <h1 style="font-family: 'Abril Fatface', cursive;">Collage</h1>
-                    <h2>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </h2>
+                <div class="text_box_1">
+                    <h5 class="heading">Collage</h5>
+                    <p>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </p>
                 </div>
             </div>
         
                 <div id="test_1" class="img_ban_2" style="display: none";>
-                    <img class="img_ban" src="tn_1_un.png"/>
-                    <img class="img_ban" src="tn_1_un.png"/>
-                    <img class="img_ban" src="tn_1_un.png"/>
-                    <img class="img_ban" src="tn_1_un.png"/>
+                    <img class="img_ban" src="ph_1.png"/>
+                    <img class="img_ban" src="ph_2.png"/>
+                    <img class="img_ban" src="ph_3.png"/>
+                    <img class="img_ban_1" src="ph_4.png"/>
                     <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
                     </div>
                     <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
                     </div>
                     <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
                     </div>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    <div class="text_box_1">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
                     </div>
                 </div>
                 
                 <div id="test_2" class="img_ban_2" style="display: none";>
-                    <img class="img_ban" src="tn_2_un.png"/>
-                    <img class="img_ban" src="tn_2_un.png"/>
-                    <img class="img_ban" src="tn_2_un.png"/>
-                    <img class="img_ban" src="tn_2_un.png"/>
+                    <img class="img_ban" src="sc_4.png"/>
+                    <img class="img_ban" src="sc_2.png"/>
+                    <img class="img_ban" src="sc_3.png"/>
+                    <img class="img_ban_1" src="sc_1.png"/>
+                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    </div>
+                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    </div>
+                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    </div>
+                    <div class="text_box_1">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis
+                    </div>
                 </div>
         
                 <div id="test_3" class="img_ban_2" style="display: none";>  
                     <img class="img_ban" src="tn_3_un.png"/>
                     <img class="img_ban" src="tn_3_un.png"/>
                     <img class="img_ban" src="tn_3_un.png"/>
-                    <img class="img_ban" src="tn_3_un.png"/>
+                    <img class="img_ban_1" src="tn_3_un.png"/>
+                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    </div>
+                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    </div>
+                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    </div>
+                    <div class="text_box_1">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis
+                    </div>
                 </div>
         
                 <div id="test_4" class="img_ban_2 " style="display: none";>   
                     <img class="img_ban" src="tn_4_un.png"/>
                     <img class="img_ban" src="tn_4_un.png"/>
                     <img class="img_ban" src="tn_4_un.png"/>
-                    <img class="img_ban" src="tn_4_un.png"/>
+                    <img class="img_ban_1" src="tn_4_un.png"/>
+                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    </div>
+                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    </div>
+                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    </div>
+                    <div class="text_box_1">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis
+                    </div>
                 </div>
        
         <div class="banner_3">
             <h1 class="About">About</h1>
+            <p class="about_text">blalawejhwfoijwpeoifjhwpeiofjhwepoif</p>
         </div>
    
     </body>
