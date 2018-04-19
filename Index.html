@@ -14,12 +14,16 @@
              
                 var img1 = document.getElementById('photography');
                 img1.src = 'tn_1_un.png';
+                img1.style.borderBottom = 'solid 10px #ffffff';
                 var img2 = document.getElementById('screen');
-                img1.src = 'tn_2_un.png';
+                img2.src = 'tn_2_un.png';
+                img2.style.borderBottom = 'solid 10px #ffffff';
                 var img3 = document.getElementById('web');
-                img1.src = 'tn_3_un.png';
+                img3.src = 'tn_3_un.png';
+                img3.style.borderBottom = 'solid 10px #ffffff';
                 var img4 = document.getElementById('collage');
-                img1.src = 'tn_4_un.png';
+                img4.src = 'tn_4_un.png';
+                img4.style.borderBottom = 'solid 10px #ffffff';
                 
             }
                 
@@ -42,17 +46,20 @@
             }
             
             
-            function DisPorfolioContent(id){
+            function DisPorfolioContent(id, img){
                 
                 ResetPortfoliothumbnails();
                 ResetTBD();
                 
                 var pnlPortfolio_Summary = document.getElementById('pnlPortfolio_Summary');
                 pnlPortfolio_Summary.style.display = "none";
-                                                        
-                
+                                                                        
                 var portfoliocontent = document.getElementById(id);
-                portfoliocontent.style.display = "block";                                                        
+                portfoliocontent.style.display = "block";     
+                
+                
+                //img.className='img_ban_activ'
+                img.style.borderBottom = 'solid 10px #b4e3e0';
             } 
             
             
@@ -73,6 +80,7 @@
     <body>
             <div class="header">
                 <div class="logo">Portfolio</div>
+                <h3 class="about_text">Thomas Kearns-Hill</h3>
             </div>
           
         
@@ -80,41 +88,41 @@
             
             <img id="photography" class="img_ban" src="tn_1_un.png" 
                  onmouseover="this.src='tn_1_se.png';" 
-                 onmouseout="controledmouceoutevent(this, 'tn_1_un.png', 'pnlPortfolio_Photography')" 
-                 onclick="DisPorfolioContent('pnlPortfolio_Photography')"/>
+                 onmouseout="this.src='tn_1_un.png';" 
+                 onclick="DisPorfolioContent('pnlPortfolio_Photography', this);"/>
             
             <img id="screen" class="img_ban" src="tn_2_un.png" 
                  onmouseover="this.src='tn_2_se.png';" 
-                 onmouseout="controledmouceoutevent(this, 'tn_2_un.png', 'pnlPortfolio_Screen')" 
-                 onclick="DisPorfolioContent('pnlPortfolio_Screen')"/>
+                 onmouseout="this.src='tn_2_un.png';"
+                 onclick="DisPorfolioContent('pnlPortfolio_Screen', this)"/>
             
             <img id="web" class="img_ban" src="tn_3_un.png" 
                  onmouseover="this.src='tn_3_se.png';" 
-                 onmouseout="controledmouceoutevent(this, 'tn_3_un.png', 'pnlPortfolio_Web')"
-                 onclick="DisPorfolioContent('pnlPortfolio_Web')"/>
+                 onmouseout="this.src='tn_3_un.png';"
+                 onclick="DisPorfolioContent('pnlPortfolio_Web', this)"/>
             
             <img id="collage" class="img_ban_1" src="tn_4_un.png" 
                  onmouseover="this.src='tn_4_se.png';" 
-                 onmouseout="controledmouceoutevent(this, 'tn_4_un.png', 'pnlPortfolio_Collage')"
-                 onclick="DisPorfolioContent('pnlPortfolio_Collage')"/>
+                 onmouseout="this.src='tn_4_un.png';"
+                 onclick="DisPorfolioContent('pnlPortfolio_Collage', this)"/>
                
         </div>
         
             <div class="banner_2" id='pnlPortfolio_Summary'>
                 <div class="text_box">
-                    <h5 class="heading">Photography</h5>
-                    <p>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </p>
+                    <h3 class="heading">Photography</h3>
+                    <p>Duis quis elementum magna. Integer tempor turpis sed lacus tempor luctus. Sed hendrerit pharetra magna a luctus. Sed pulvinar justo eget nulla pulvinar euismod. Praesent mattis ligula eu porta pellentesque. Donec vehicula lectus quam. </p>
                 </div>
                 <div class="text_box">
-                    <p> Screen 
-                        Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </p>
+                    <h3 class="heading">Screen</h3>
+                    <p> Aliquam laoreet bibendum lectus, vel tempus lorem varius in. Aenean vel malesuada lorem, eu aliquam nisl. Sed ac dictum nibh, vel dapibus mi. Cras rhoncus pharetra erat, at accumsan metus.</p>
                 </div> 
                 <div class="text_box">
-                    <h5 class="heading">Web Design</h5>
-                    <p>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </p>
+                    <h3 class="heading">Web Design</h3>
+                    <p>Sed mollis consequat nunc at faucibus. Vivamus porttitor hendrerit pulvinar. Praesent semper scelerisque varius. Sed ornare aliquam arcu. Donec volutpat nisi semper dui posuere faucibus in porttitor. </p>
                 </div>
                 <div class="text_box_1">
-                    <h5 class="heading">Collage</h5>
+                    <h3 class="heading">Collage</h3>
                     <p>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </p>
                 </div>
             </div>
@@ -124,13 +132,13 @@
                     <img class="img_ban" src="ph_2.png"/>
                     <img class="img_ban" src="ph_3.png"/>
                     <img class="img_ban_1" src="ph_4.png"/>
-                    <div class="text_box">PHOTOGRAPHY   Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    <div class="text_box">Volutpat mauris nec lorem malesuada, eget commodo nunc dictum. Sed eget accumsan est, id lobortis lorem. Maecenas tempor turpis odio, sit amet efficitur urna porta quis. In diam dolor.   
                     </div>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    <div class="text_box">Nunc venenatis, urna vitae dapibus euismod, neque mi suscipit nibh, sed dapibus nibh tortor ac libero. Phasellus fermentum odio est, nec tempus lorem dignissim a. 
                     </div>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    <div class="text_box">Nullam at nisl lacinia, tempus enim euismod, ornare ex. Etiam sed massa elit. Phasellus tortor orci, sodales id ex eu, facilisis tincidunt erat. Ut nec eros dictum, interdum ipsum a.
                     </div>
-                    <div class="text_box_1">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    <div class="text_box_1">Mauris et sodales nunc. Vivamus ornare dictum nisi, nec tincidunt neque. Morbi dapibus leo lacus, ut suscipit ligula consectetur id. Fusce quis porta nisl. 
                     </div>
                 </div>
                 
@@ -139,49 +147,50 @@
                     <img class="img_ban" src="sc_2.png"/>
                     <img class="img_ban" src="sc_3.png"/>
                     <img class="img_ban_1" src="sc_1.png"/>
-                    <div class="text_box">SCREEN  Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    <div class="text_box">Nunc quis leo vel quam malesuada imperdiet ac eget tortor. Integer eu orci laoreet, malesuada dui at, accumsan ex. Mauris sapien lacus, suscipit quis arcu at, dignissim semper massa. Nulla facilisi.    
                     </div>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    <div class="text_box">Aliquam bibendum a elit quis volutpat. Duis finibus neque eu ligula auctor, a tristique enim auctor. Donec pulvinar turpis quis ultricies ornare. 
                     </div>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    <div class="text_box"> Suspendisse pharetra nunc massa, et sodales arcu eleifend sed. Integer est augue, ultrices sed dignissim eget, vulputate id lorem. 
                     </div>
-                    <div class="text_box_1">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis
+                    <div class="text_box_1">Quisque sed lorem sit amet ex aliquet rhoncus eget id nibh. Nullam quis efficitur est, a finibus ipsum. In hac habitasse platea dictumst. 
                     </div>
                 </div>
         
                 <div id="pnlPortfolio_Web" class="img_ban_2" style="display: none";>  
-                    <img class="img_ban" src="tn_3_un.png"/>
-                    <img class="img_ban" src="tn_3_un.png"/>
-                    <img class="img_ban" src="tn_3_un.png"/>
-                    <img class="img_ban_1" src="tn_3_un.png"/>
-                    <div class="text_box">WEB WEB  Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    <img class="img_ban" src="wb_1.png"/>
+                    <img class="img_ban" src="wb_2.png"/>
+                    <img class="img_ban" src="wb_3.png"/>
+                    <img class="img_ban_1" src="wb_4.png"/>
+                    <div class="text_box">Etiam et risus erat. Phasellus ligula nisi, ultricies vel aliquet ac, elementum at magna. Fusce consequat rutrum lectus, in mollis sapien hendrerit ac.   
                     </div>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    <div class="text_box">Sed nec massa at sem congue malesuada. Nulla hendrerit placerat sapien. Suspendisse nibh mauris, cursus quis erat ultrices, maximus gravida justo.
                     </div>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    <div class="text_box">Praesent molestie odio vitae vehicula maximus. Fusce bibendum maximus nunc eget pretium. Cras gravida auctor est quis iaculis.
                     </div>
-                    <div class="text_box_1">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis
+                    <div class="text_box_1">Integer commodo nibh et odio fringilla fermentum. Nam tempor nisl ac posuere mollis. Fusce tincidunt vitae massa nec suscipit.
                     </div>
                 </div>
         
                 <div id="pnlPortfolio_Collage" class="img_ban_2 " style="display: none";>   
-                    <img class="img_ban" src="tn_4_un.png"/>
-                    <img class="img_ban" src="tn_4_un.png"/>
-                    <img class="img_ban" src="tn_4_un.png"/>
-                    <img class="img_ban_1" src="tn_4_un.png"/>
-                    <div class="text_box">COLLAGE  Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    <img class="img_ban" src="cl_1.png"/>
+                    <img class="img_ban" src="cl_2.png"/>
+                    <img class="img_ban" src="cl_3.png"/>
+                    <img class="img_ban_1" src="cl_4.png"/>
+                    <div class="text_box">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam non pellentesque tortor. Phasellus scelerisque congue purus eu interdum. 
                     </div>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    <div class="text_box">Suspendisse purus felis, hendrerit sed bibendum ut, feugiat in mauris. Mauris placerat tempus pellentesque. Suspendisse a nibh consectetur dui elementum pellentesque. 
                     </div>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
+                    <div class="text_box">Sed est magna, aliquet ac dapibus in, pretium nec erat. Praesent lobortis lorem sed ligula aliquet mollis. Aliquam vitae erat vitae ex finibus sagittis at eu nibh. 
                     </div>
-                    <div class="text_box_1">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis
+                    <div class="text_box_1">Nam ultricies vitae ante eget mattis. In sit amet placerat nisl, sed mattis ipsum. Aliquam fringilla ultricies augue. Curabitur nisl velit, venenatis et molestie et, ullamcorper nec felis. 
                     </div>
                 </div>
        
         <div class="banner_3">
             <h1 class="About">About</h1>
-            <p class="about_text">blalawejhwfoijwpeoifjhwpeiofjhwepoif</p>
+            <h3 class="about_text">Vestibulum tortor lorem, dictum quis erat at, imperdiet congue sapien. Nulla vitae aliquet sem, nec aliquet massa. Praesent ante nunc, molestie finibus elementum eu, iaculis et nisl.</h3>
+            <h5 class="about_text">thomas@morphological.geek.nz</h5>
         </div>
    
     </body>

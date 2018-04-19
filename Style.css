@@ -3,11 +3,12 @@
 
 
 .header {
-    height: 100px;
+    height: 150px;
     width: auto;
     margin-bottom: 20px;
     background-color:#b4e3e0;
     color: white;
+    padding-top: 40px;
 }
 
 
@@ -26,7 +27,6 @@
 .banner_1 {
     height: 145px;
     width: 920px;
-    outline: red 2px solid;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -38,6 +38,15 @@
     float: left;
     height: 130px;
     margin-right: 20px;
+    border-bottom: solid 10px #ffffff;
+}
+
+.img_ban_activ {
+    width: 215px;
+    float: left;
+    height: 130px;
+    margin-right: 20px;
+    border-bottom: solid 10px #b4e3e0;
 }
 
 .img_ban_1 {
@@ -47,6 +56,8 @@
     margin-right: 0px;
 }
 
+
+
 /* add the gallery */
 .banner_2 {
     width: 920px;
@@ -54,20 +65,18 @@
     margin-top: 8px;
     margin-left: auto;
     margin-right: auto;
-    background-color: aquamarine;
 }
 
 .text_box {
-    height: 130;
+    height: 200;
     width: 215px;
     margin-right: 20px;
     float: left;
     font-family: 'Lato', sans-serif;
-    background-color: red;
 }
 
 .text_box_1 {
-    height: 130px;
+    height: 200px;
     width: 215px;
     float: left;
     font-family: 'Lato', sans-serif;
@@ -85,12 +94,12 @@
 }
 
 .img_ban_2 { 
-    height: 450px;
+    height: 300px;
+    margin-top: 20px;
     width: 920px;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    background-color: bisque;
 }
 
 .banner_3 {
@@ -99,6 +108,7 @@
     background-color:#b4e3e0;
     color: white;
     margin-top: 20px;
+    padding-top: 10px;
 }
 
 .About {
@@ -113,6 +123,7 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Lato', sans-serif;
     width: 920px;
 }
 
