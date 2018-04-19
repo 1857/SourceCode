@@ -8,22 +8,54 @@
            
         <script>  
             
+            
+            
+            function ResetPortfoliothumbnails(){
+             
+                var img1 = document.getElementById('photography');
+                img1.src = 'tn_1_un.png';
+                var img2 = document.getElementById('screen');
+                img1.src = 'tn_2_un.png';
+                var img3 = document.getElementById('web');
+                img1.src = 'tn_3_un.png';
+                var img4 = document.getElementById('collage');
+                img1.src = 'tn_4_un.png';
+                
+            }
+                
+             function ResetTBD(){   
+                var pnlPortfolio_Summary = document.getElementById('pnlPortfolio_Summary');
+                pnlPortfolio_Summary.style.display = "block";
+                
+                var pnlPortfolio_Photography = document.getElementById('pnlPortfolio_Photography');
+                pnlPortfolio_Photography.style.display = 'none';
+                
+                var pnlPortfolio_Screen = document.getElementById('pnlPortfolio_Screen');
+                pnlPortfolio_Screen.style.display = 'none';
+                
+                var pnlPortfolio_Web = document.getElementById('pnlPortfolio_Web');
+                pnlPortfolio_Web.style.display = 'none';
+                
+                var pnlPortfolio_Collage = document.getElementById('pnlPortfolio_Collage');
+                pnlPortfolio_Collage.style.display = 'none';
+                
+            }
+            
+            
             function DisPorfolioContent(id){
-                var othething = document.getElementById('text');
+                
+                ResetPortfoliothumbnails();
+                ResetTBD();
+                
+                var pnlPortfolio_Summary = document.getElementById('pnlPortfolio_Summary');
+                pnlPortfolio_Summary.style.display = "none";
+                                                        
+                
                 var portfoliocontent = document.getElementById(id);
-                //element.style.display = "none";
-                if (portfoliocontent.style.display == "none")
-                {
-                    portfoliocontent.style.display = "block";
-                    othething.style.display = "none";
-                    
-                }
-                else
-                {
-                    portfoliocontent.style.display = "none";
-                    othething.style.display = "block";
-                } 
+                portfoliocontent.style.display = "block";                                                        
             } 
+            
+            
             
             function controledmouceoutevent(img, src, id){
                 var portfoliocontent = document.getElementById(id);
@@ -45,14 +77,30 @@
           
         
         <div class="banner_1">
-            <img class="img_ban" src="tn_1_un.png" onmouseover="this.src='tn_1_se.png';" onmouseout="controledmouceoutevent(this, 'tn_1_un.png', 'test_1')" onclick="DisPorfolioContent('test_1')"/>
-            <img class="img_ban" src="tn_2_un.png" onmouseover="this.src='tn_2_se.png';" onmouseout="this.src='tn_2_un.png'" onclick="DisPorfolioContent('test_2')"/>
-            <img class="img_ban" src="tn_3_un.png" onmouseover="this.src='tn_3_se.png';" onmouseout="this.src='tn_3_un.png'" onclick="DisPorfolioContent('test_3')"/>
-            <img class="img_ban_1" src="tn_4_un.png" onmouseover="this.src='tn_4_se.png';" onmouseout="this.src='tn_4_un.png'" onclick="DisPorfolioContent('test_4')"/>
+            
+            <img id="photography" class="img_ban" src="tn_1_un.png" 
+                 onmouseover="this.src='tn_1_se.png';" 
+                 onmouseout="controledmouceoutevent(this, 'tn_1_un.png', 'pnlPortfolio_Photography')" 
+                 onclick="DisPorfolioContent('pnlPortfolio_Photography')"/>
+            
+            <img id="screen" class="img_ban" src="tn_2_un.png" 
+                 onmouseover="this.src='tn_2_se.png';" 
+                 onmouseout="controledmouceoutevent(this, 'tn_2_un.png', 'pnlPortfolio_Screen')" 
+                 onclick="DisPorfolioContent('pnlPortfolio_Screen')"/>
+            
+            <img id="web" class="img_ban" src="tn_3_un.png" 
+                 onmouseover="this.src='tn_3_se.png';" 
+                 onmouseout="controledmouceoutevent(this, 'tn_3_un.png', 'pnlPortfolio_Web')"
+                 onclick="DisPorfolioContent('pnlPortfolio_Web')"/>
+            
+            <img id="collage" class="img_ban_1" src="tn_4_un.png" 
+                 onmouseover="this.src='tn_4_se.png';" 
+                 onmouseout="controledmouceoutevent(this, 'tn_4_un.png', 'pnlPortfolio_Collage')"
+                 onclick="DisPorfolioContent('pnlPortfolio_Collage')"/>
                
         </div>
         
-            <div class="banner_2" id='text'>
+            <div class="banner_2" id='pnlPortfolio_Summary'>
                 <div class="text_box">
                     <h5 class="heading">Photography</h5>
                     <p>Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis. </p>
@@ -71,12 +119,12 @@
                 </div>
             </div>
         
-                <div id="test_1" class="img_ban_2" style="display: none";>
+                <div id="pnlPortfolio_Photography" class="img_ban_2" style="display: none";>
                     <img class="img_ban" src="ph_1.png"/>
                     <img class="img_ban" src="ph_2.png"/>
                     <img class="img_ban" src="ph_3.png"/>
                     <img class="img_ban_1" src="ph_4.png"/>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    <div class="text_box">PHOTOGRAPHY   Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
                     </div>
                     <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
                     </div>
@@ -86,12 +134,12 @@
                     </div>
                 </div>
                 
-                <div id="test_2" class="img_ban_2" style="display: none";>
+                <div id="pnlPortfolio_Screen" class="img_ban_2" style="display: none";>
                     <img class="img_ban" src="sc_4.png"/>
                     <img class="img_ban" src="sc_2.png"/>
                     <img class="img_ban" src="sc_3.png"/>
                     <img class="img_ban_1" src="sc_1.png"/>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    <div class="text_box">SCREEN  Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
                     </div>
                     <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
                     </div>
@@ -101,12 +149,12 @@
                     </div>
                 </div>
         
-                <div id="test_3" class="img_ban_2" style="display: none";>  
+                <div id="pnlPortfolio_Web" class="img_ban_2" style="display: none";>  
                     <img class="img_ban" src="tn_3_un.png"/>
                     <img class="img_ban" src="tn_3_un.png"/>
                     <img class="img_ban" src="tn_3_un.png"/>
                     <img class="img_ban_1" src="tn_3_un.png"/>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    <div class="text_box">WEB WEB  Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
                     </div>
                     <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
                     </div>
@@ -116,12 +164,12 @@
                     </div>
                 </div>
         
-                <div id="test_4" class="img_ban_2 " style="display: none";>   
+                <div id="pnlPortfolio_Collage" class="img_ban_2 " style="display: none";>   
                     <img class="img_ban" src="tn_4_un.png"/>
                     <img class="img_ban" src="tn_4_un.png"/>
                     <img class="img_ban" src="tn_4_un.png"/>
                     <img class="img_ban_1" src="tn_4_un.png"/>
-                    <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
+                    <div class="text_box">COLLAGE  Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.   
                     </div>
                     <div class="text_box">Suspendisse a finibus nisl. Donec ornare, est id bibendum tempor, justo elit ultricies neque, id ornare lacus ligula in felis.
                     </div>
